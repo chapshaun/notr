@@ -1,0 +1,80 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top"
+    android:background="@drawable/bg"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/center_point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/center_point">
+        tools:context="com.example.shaunchap.notr.MainActivity">
+
+    <ListView
+        android:id="@+id/notes_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="5dp"
+        android:fontFamily="serif-monospace"
+        android:layout_margin="20dp"
+        android:divider="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:id="@+id/right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/center_point">
+        tools:context="com.example.shaunchap.notr.NoteActivity">
+
+        <EditText
+            android:id="@+id/notes_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorAccent"
+            android:fontFamily="serif-monospace"
+            android:hint="Title"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/notes_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorAccent"
+            android:fontFamily="serif-monospace"
+            android:hint="Notes"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
